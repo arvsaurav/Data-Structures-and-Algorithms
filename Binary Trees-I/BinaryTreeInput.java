@@ -62,3 +62,4 @@ class BinaryTreeNode<T>
 		this.left = null;
 		this.right = null;
 	}
+}
