@@ -11,31 +11,31 @@ No need to print the list, it has already been taken care. Only return the new h
 
 public class Solution 
 {
-	 public static  LinkedListNode<Integer> swapNodes(LinkedListNode<Integer> head,int i,int j)
+     public static  LinkedListNode<Integer> swapNodes(LinkedListNode<Integer> head,int i,int j)
      {
       
-		if(head==null)
-    		return null;
+	if(head==null)
+    	    return null;
     	if (i == j)  
-        	return head;  
+            return head;  
   
     	LinkedListNode<Integer> element1 = null;
         LinkedListNode<Integer> element2 = null;  
-  		LinkedListNode<Integer> temp = head;
+  	LinkedListNode<Integer> temp = head;
      	int count = 1;
         //keep track of just previous node.
     	while(temp.next!=null) 
         {  
-        	if(count == i) 
+            if(count == i) 
             {  
             	element1 = temp;  
-        	}  
-        	else if(count == j) 
-        	{  
+            }  
+            else if(count == j) 
+            {  
             	element2 = temp;  
-        	}  
-  			count = count + 1;
-       		temp = temp.next;
+            }  
+  	    count = count + 1;
+       	    temp = temp.next;
     	}  
   
     	if(element1 != null &&  element2 != null) 
@@ -48,7 +48,7 @@ public class Solution
     		element2.next.next = temp;  
     	}  
     	return head; 
-	} 
+    } 
 }
      
 
@@ -78,9 +78,9 @@ public class Solution
         {
             if(i != 0 && count == i-1)
             {
-				prevElement1 = temp;
+		prevElement1 = temp;
             }
-			if(count == i)
+	    if(count == i)
             {
                 element1 = temp;
             }
@@ -90,7 +90,7 @@ public class Solution
             }
             if(count == j)
             {
-				element2 = temp;
+		element2 = temp;
             }
             temp = temp.next;
             count = count + 1;
